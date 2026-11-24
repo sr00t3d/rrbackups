@@ -27,6 +27,23 @@ sudo ./rrbackups.sh scan --dir /backup/accounts --verify
 
 ---
 
+## Ejemplo de Salida Real
+
+```text
+==================================================================================================
+ rrbackups.sh v2.0.0 | Scan | /var/backups/rrbackups/20261122 | 2026-11-22T11:38:13Z
+==================================================================================================
+USER    ROLE       SIZE      EXISTS  OWNER  VERIFY   ARCHIVE
+------  ---------  --------  ------  -----  -------  ----------------------------------------
+broken  PRIMARY    16 B      NO      -      CORRUPT  cpmove-broken.tar.gz
+percio  PRIMARY    1.50 KiB  YES     root   VALID    cpmove-percio.tar.gz
+percio  DUPLICATE  1.50 KiB  YES     root   VALID    backup-11.20.2026_01-00-00_percio.tar.gz
+
+Summary: 3 archive(s) | 2 unique account(s) | 2 warning(s)
+```
+
+---
+
 ## Licencia
 
 Licenciado bajo [Apache License 2.0](LICENSE).
